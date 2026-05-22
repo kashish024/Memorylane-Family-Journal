@@ -1,29 +1,27 @@
 # MemoryLane Marketing Site (GitHub Pages)
 
-Static marketing pages live in this `docs/` folder and can be hosted free on **GitHub Pages**.
+Static marketing pages live at the **repository root** (GitHub Pages serves `/index.html` from the root, not `docs/`).
 
 ## What's included
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Landing page (hero, features, FAQ, download CTAs) |
-| `privacy.html` | Privacy policy (required for App Store) |
+| `index.html` | Marketing landing page |
+| `support.html` | App Store support / FAQ page (old homepage) |
+| `privacy.html` | Privacy policy |
 | `terms.html` | Terms of use |
 | `css/style.css` | Styles matching app colors |
-| `assets/icon.png` | App icon |
+| `assets/` | App icon and favicon |
 | `.nojekyll` | Disables Jekyll so static assets work |
+
+Copies also exist under `docs/` for reference; **edit the root files** for the live site.
 
 ## Enable GitHub Pages
 
-1. Push this repo to GitHub (if not already).
-2. Open the repo on GitHub → **Settings** → **Pages**.
-3. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
-4. Branch: `main` (or your default branch), folder: **`/docs`**.
-5. Save. After 1–2 minutes your site is live at:
-
-   `https://<your-github-username>.github.io/<repo-name>/`
-
-   Example: `https://kashish024.github.io/MemoryLane/`
+1. Push this repo to GitHub.
+2. **Settings** → **Pages** → Source: **Deploy from a branch**
+3. Branch: **main**, folder: **`/ (root)`** (not `/docs`)
+4. Site URL: `https://kashish024.github.io/Memorylane-Family-Journal/`
 
 ## Custom domain (optional)
 

@@ -1,80 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemoryLane - Support</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #2D3436;
-        }
-        h1 { color: #87C38F; }
-        h2 { color: #E07A5F; margin-top: 30px; }
-        .contact { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
-        a { color: #87C38F; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .legal-links { 
-            display: flex; 
-            gap: 20px; 
-            margin-top: 10px;
-        }
-        .legal-links a {
-            font-size: 16px;
-            font-weight: 500;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MemoryLane is your family's personal memory journal. Capture photos, voice notes, and stories—and get beautiful AI monthly summaries delivered to your inbox." />
+  <meta name="theme-color" content="#87C38F" />
+  <meta property="og:title" content="MemoryLane — Family Memory Journal" />
+  <meta property="og:description" content="Capture every precious moment with your children. Photos, voice notes, AI summaries, and family sharing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/icon.png" />
+  <title>MemoryLane — Family Memory Journal</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>MemoryLane Support</h1>
-    
-    <p>Welcome to MemoryLane - Your Family's Memory Journal</p>
-    
-    <h2>Contact Support</h2>
-    <div class="contact">
-        <p><strong>Email:</strong> <a href="mailto:memorylane.support@gmail.com">memorylane.support@gmail.com</a></p>
-        <p>We typically respond within 24-48 hours.</p>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <img src="assets/icon.png" alt="" width="40" height="40" />
+        MemoryLane
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" id="nav-toggle">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <a class="btn btn-primary" href="#download">Get the app</a>
     </div>
-    
-    <h2>Frequently Asked Questions</h2>
-    
-    <h3>How do I add a child profile?</h3>
-    <p>Tap the "ADD" button in the header on the home screen, then enter your child's name, birthdate, and select an avatar.</p>
-    
-    <h3>How do I add a memory?</h3>
-    <p>Tap "Add Memory" from the home screen or the + button in the bottom navigation. Choose photo, camera, or voice to capture your memory.</p>
-    
-    <h3>Can I backdate memories?</h3>
-    <p>Yes! When creating a memory, tap "Backdate this memory" to select any date in the past.</p>
-    
-    <h3>How do monthly email summaries work?</h3>
-    <p>Navigate to the Monthly Summary screen from your home screen. The AI will generate a beautiful summary of your child's memories for the current month and send it to your email.</p>
-    
-    <h3>Is my data safe?</h3>
-    <p>Yes! All data is securely stored in Firebase with enterprise-grade encryption. You can export your data at any time from Settings.</p>
-    
-    <h3>How do I export my data?</h3>
-    <p>Go to Settings → Export Memories. You'll receive a JSON file with all your memories that you can download and save.</p>
-    
-    <h2>Privacy & Legal</h2>
-    <div class="legal-links">
-        <a href="terms.html">Terms of Use</a>
-        <span style="color: #95A5A6;">•</span>
-        <a href="privacy.html">Privacy Policy</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge">Family journal · iOS & Android</span>
+          <h1>Every little moment, <span>remembered forever</span></h1>
+          <p class="hero-lead">
+            MemoryLane helps parents capture the everyday magic of childhood—photos, voice notes, and written stories—in one beautiful timeline. AI turns your month into a heartfelt summary emailed to you.
+          </p>
+          <div class="store-buttons" id="download">
+            <!-- Replace href="#" with your App Store / Play Store URLs when live -->
+            <a class="store-btn" id="app-store-link" href="#" aria-label="Download on the App Store">
+              <span>🍎</span>
+              <span>
+                <small>Download on the</small>
+                App Store
+              </span>
+            </a>
+            <a class="store-btn" id="play-store-link" href="#" aria-label="Get it on Google Play">
+              <span>▶</span>
+              <span>
+                <small>Get it on</small>
+                Google Play
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-mock" aria-hidden="true">
+            <div class="phone-screen">
+              <img src="assets/icon.png" alt="" />
+              <h3>Today's memory</h3>
+              <p>First steps at the park — voice note, photo, and a few words. All in one place.</p>
+              <div class="memory-dots"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Built for busy parents</h2>
+          <p>Quick to capture, meaningful to revisit, and easy to share with the people who love your kids as much as you do.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon green" aria-hidden="true">📸</div>
+            <h3>Capture any moment</h3>
+            <p>Add photos, record voice notes, or write stories. Every format counts—first words, silly faces, and quiet bedtime wins.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon coral" aria-hidden="true">🎙️</div>
+            <h3>Voice transcription</h3>
+            <p>Record a quick voice note while they're still chattering. MemoryLane transcribes it so you can search and read it later.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon gold" aria-hidden="true">✨</div>
+            <h3>AI monthly summaries</h3>
+            <p>Get a warm, AI-generated recap of your child's month—delivered straight to your inbox. A keepsake you'll actually read.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon green" aria-hidden="true">👨‍👩‍👧</div>
+            <h3>Family contributors</h3>
+            <p>Invite grandparents, partners, or caregivers to add memories too. Everyone helps build the story (Premium).</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon coral" aria-hidden="true">📅</div>
+            <h3>Beautiful timeline</h3>
+            <p>Scroll through memories by child and date. Relive growth milestones and everyday joy in one organized place.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon gold" aria-hidden="true">☁️</div>
+            <h3>Backup & peace of mind</h3>
+            <p>Your memories are synced securely. Premium includes automatic weekly backups so nothing precious is lost.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How it works</h2>
+          <p>Three steps from messy camera roll to a family journal you'll treasure.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Add your children</h3>
+            <p>Create a profile for each child with their name and birthday. Start with one on the free plan.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Capture memories</h3>
+            <p>Snap a photo, record a voice note, or jot a few lines—whatever fits the moment.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Relive & share</h3>
+            <p>Browse the timeline, generate monthly summaries, and invite family to contribute.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="premium-band">
+          <div>
+            <h2>MemoryLane Premium</h2>
+            <p>Start free, upgrade when you're ready for unlimited memories and family collaboration.</p>
+            <ul class="premium-list">
+              <li>Unlimited children & memories</li>
+              <li>Unlimited storage</li>
+              <li>Family contributors</li>
+              <li>Auto monthly summaries</li>
+              <li>Weekly auto backup</li>
+              <li>Photo profile avatars</li>
+            </ul>
+          </div>
+          <a class="btn btn-coral" href="#download">See plans in app</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is MemoryLane free?</summary>
+            <p>Yes. The free tier includes one child, up to 20 memories per child per month, and manual monthly summaries. Premium unlocks unlimited memories, contributors, automatic summaries, and backups.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who can see my family's memories?</summary>
+            <p>Only you and people you explicitly invite as contributors. Your data is stored securely and tied to your account. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do monthly summaries work?</summary>
+            <p>MemoryLane uses AI to read through the month's memories and craft a warm narrative summary. Free users can generate them manually; Premium subscribers receive them automatically by email.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can grandparents add memories?</summary>
+            <p>Yes, with MemoryLane Premium. Send an invitation from the app and they can contribute photos and notes to your child's timeline.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Start your family's memory journal today</h2>
+        <p>Download MemoryLane and capture the moments you'll want to remember years from now.</p>
+        <a class="btn btn-primary" href="#download">Get MemoryLane</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#">
+            <img src="assets/icon.png" alt="" width="40" height="40" />
+            MemoryLane
+          </a>
+          <p>Your family's personal memory journal. Capture childhood, one moment at a time.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal & support</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="support.html">Help & support</a></li>
+            <li><a href="mailto:memorylane.support@gmail.com">memorylane.support@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> MemoryLane. All rights reserved.</p>
+      </div>
     </div>
-    
-    <h2>App Information</h2>
-    <p><strong>Version:</strong> 1.2.1</p>
-    <p><strong>Platform:</strong> iOS</p>
-    <p><strong>Developer:</strong> Ashish Kashish</p>
-    
-    <hr style="margin: 40px 0;">
-    <p style="text-align: center; color: #95A5A6; font-size: 14px;">
-        © 2026 MemoryLane. All rights reserved.
-    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const toggle = document.getElementById("nav-toggle");
+    const links = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+
+    // ── Store links: set these when your apps are live ──
+    const APP_STORE_URL = "";
+    const PLAY_STORE_URL = "";
+
+    const appStore = document.getElementById("app-store-link");
+    const playStore = document.getElementById("play-store-link");
+
+    if (!APP_STORE_URL) {
+      appStore.classList.add("disabled");
+      appStore.href = "#";
+      appStore.querySelector("small").textContent = "Coming soon on";
+    } else {
+      appStore.href = APP_STORE_URL;
+    }
+
+    if (!PLAY_STORE_URL) {
+      playStore.classList.add("disabled");
+      playStore.href = "#";
+      playStore.querySelector("small").textContent = "Coming soon on";
+    } else {
+      playStore.href = PLAY_STORE_URL;
+    }
+  </script>
 </body>
 </html>
