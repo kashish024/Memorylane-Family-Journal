@@ -38,25 +38,24 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="hero-badge">Family journal · iOS & Android</span>
+          <span class="hero-badge">Family journal · Available on iPhone</span>
           <h1>Every little moment, <span>remembered forever</span></h1>
           <p class="hero-lead">
             MemoryLane helps parents capture the everyday magic of childhood—photos, voice notes, and written stories—in one beautiful timeline. AI turns your month into a heartfelt summary emailed to you.
           </p>
           <div class="store-buttons" id="download">
-            <!-- Replace href="#" with your App Store / Play Store URLs when live -->
-            <a class="store-btn" id="app-store-link" href="#" aria-label="Download on the App Store">
+            <a class="store-btn" id="app-store-link" href="https://apps.apple.com/us/app/memorylane-family-journal/id6756403396" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
               <span>🍎</span>
               <span>
                 <small>Download on the</small>
                 App Store
               </span>
             </a>
-            <a class="store-btn" id="play-store-link" href="#" aria-label="Get it on Google Play">
+            <a class="store-btn disabled" id="play-store-link" href="#" aria-disabled="true" title="Android version coming soon">
               <span>▶</span>
               <span>
-                <small>Get it on</small>
-                Google Play
+                <small>Android</small>
+                Coming soon
               </span>
             </a>
           </div>
@@ -183,6 +182,10 @@
             <summary>Can grandparents add memories?</summary>
             <p>Yes, with MemoryLane Premium. Send an invitation from the app and they can contribute photos and notes to your child's timeline.</p>
           </details>
+          <details class="faq-item">
+            <summary>Is MemoryLane on Android?</summary>
+            <p>MemoryLane is available on the <a href="https://apps.apple.com/us/app/memorylane-family-journal/id6756403396" target="_blank" rel="noopener noreferrer">App Store for iPhone</a> today. An Android version is in the works—check back soon.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -239,28 +242,9 @@
       toggle.setAttribute("aria-expanded", open);
     });
 
-    // ── Store links: set these when your apps are live ──
-    const APP_STORE_URL = "";
-    const PLAY_STORE_URL = "";
-
+    const APP_STORE_URL = "https://apps.apple.com/us/app/memorylane-family-journal/id6756403396";
     const appStore = document.getElementById("app-store-link");
-    const playStore = document.getElementById("play-store-link");
-
-    if (!APP_STORE_URL) {
-      appStore.classList.add("disabled");
-      appStore.href = "#";
-      appStore.querySelector("small").textContent = "Coming soon on";
-    } else {
-      appStore.href = APP_STORE_URL;
-    }
-
-    if (!PLAY_STORE_URL) {
-      playStore.classList.add("disabled");
-      playStore.href = "#";
-      playStore.querySelector("small").textContent = "Coming soon on";
-    } else {
-      playStore.href = PLAY_STORE_URL;
-    }
+    appStore.href = APP_STORE_URL;
   </script>
 </body>
 </html>
