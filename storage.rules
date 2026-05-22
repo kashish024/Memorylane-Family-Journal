@@ -1,0 +1,35 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Helper function to check if user owns the path
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+    
+    // User's photos (for memories)
+    match /users/{userId}/photos/{photoId} {
+      allow read: if request.auth != null;
+      allow write: if isOwner(userId);
+      allow delete: if isOwner(userId);
+    }
+    
+    // User's audio files (for memories)
+    match /users/{userId}/audio/{audioId} {
+      allow read: if request.auth != null;
+      allow write: if isOwner(userId);
+      allow delete: if isOwner(userId);
+    }
+    
+    // User's child avatars (premium feature)
+    match /users/{userId}/child_avatars/{avatarId} {
+      allow read: if request.auth != null;
+      allow write: if isOwner(userId);
+      allow delete: if isOwner(userId);
+    }
+    
+    // Default: deny all other access
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+}
+}
