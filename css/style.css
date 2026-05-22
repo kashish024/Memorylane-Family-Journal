@@ -197,6 +197,17 @@ a:hover {
   opacity: 0.85;
 }
 
+.store-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.store-icon-apple {
+  width: 1.35rem;
+  height: 1.65rem;
+}
+
 /* Hero */
 .hero {
   padding: 3.5rem 0 4rem;
